@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh'''
                 docker build .
+                docker ps
                 '''
             }
         }
