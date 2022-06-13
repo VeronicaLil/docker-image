@@ -1,4 +1,7 @@
-# Add a new comment to trigger build.
-FROM ubuntu:20.04
-RUN apt-get -y update
-RUN apt-get -y install nginx
+FROM jenkins/jenkins:lts
+
+USER root
+
+RUN apt-get update
+
+RUN apt-get install python3 docker.io -y
